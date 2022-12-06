@@ -5,7 +5,7 @@ const characterSelection = document.querySelector(".character-selection");
 const gameWindow = document.querySelector(".game");
 const winWidth = window.innerWidth;
 const winHeight = window.innerHeight;
-let insectAmount = 2;
+const insectAmount = 2;
 let scoreAmount = 0;
 let seconds = 0;
 let insectImage = "";
@@ -20,6 +20,7 @@ function playGame(e) {
   } else if (e.target.dataset.btn === "insect") {
     characterSelection.style.marginTop = "-100vh";
     insectImage = e.target.querySelector("img").src;
+
     setInterval(startTimer, 1000);
     setTimeout(renderImage, 1000);
   }
